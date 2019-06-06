@@ -6,6 +6,8 @@ function runAfterTests() {
    */
 
   // Create a variable called `myNumber`, and assign it to any number
+var myNumber = Math.floor(Math.random()*100);
+console.log(myNumber);
 
   /**
    * Create another variable called `stringValue`.
@@ -13,10 +15,14 @@ function runAfterTests() {
    * `myNumber into the function `numberToString`.
    */
 
+   var stringValue = numberToString (myNumber);
+
   /**
    * If you pass `myNumber` and `stringValue` into `areEqual`,
    * what value will you get back? Why is that?
    */
+
+areEqual (myNumber, stringValue); //would give me a false, because one is a string and one is a number.
 
   /**
    * You may have noticed that the `calculate` function combined
@@ -27,12 +33,17 @@ function runAfterTests() {
 
   // Do you see any other functions where code could be reused?
 
+//In the greater than less than, max and min?
+
   /**
    * For your `letterGrade` function,
    * what happens if you provide a `score` that is less than 0,
    * or greater than the `total` value?
    * Does it still work as expected? If it doesn't, how could you improve this?
    */
+
+//Had to add an else statement to letterGrade in order to make it so that negative scores would show as an F.
+
 
   /**
    * Your `combine` function looks okay,
@@ -44,6 +55,10 @@ function runAfterTests() {
 
   // What happens if you were to uncomment the following lines?
 
-  // combine = improvedCombine;
-  // console.log(combine('combine', 'improved!', ' is '));
+  combine = improvedCombine;
+  console.log(combine('combine', 'improved!', ' is '));
+}
+
+function improvedCombine (word1,word2,glue){
+  return word1 + glue + word2;
 }

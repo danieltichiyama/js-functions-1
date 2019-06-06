@@ -247,9 +247,13 @@ function letterGrade (score, total){
     for (key in grades){
         if (score/total >=grades[key]){
             return key;
+    }else{
+        return 'F';
     }
 }
 }
+
+console.log (letterGrade (25,20));
 
 /**
  * Checks if a `restaurant` object has a `reviews` property.
