@@ -1,3 +1,4 @@
+
 /**
  * Converts a number a string.
  * @param {number} n
@@ -127,6 +128,13 @@ function square (x){
  * @return {boolean} `a` is larger than `b`
  */
 
+ function isGreaterThan (a,b){
+     if (a>b){
+         return true;
+     }else{
+         return false;
+     }
+ }
 
 /**
  * Returns true if `a` is less than `b`.
@@ -135,6 +143,13 @@ function square (x){
  * @return {boolean} `a` is smaller than `b`
  */
 
+ function isLessThan (a, b){
+     if (a<b){
+         return true;
+     }else{
+         return false;
+     }
+ }
 
 /**
  * Returns true if `a` and `b` are equal.
@@ -143,6 +158,13 @@ function square (x){
  * @return {boolean} the numbers are equal
  */
 
+ function areEqual (a,b){
+     if (a===b){
+         return true;
+     }else{
+         return false;
+     }
+ }
 
 /**
  * Returns the smallest value of two numbers.
@@ -151,6 +173,13 @@ function square (x){
  * @return {number} the smallest number
  */
 
+function minimum (x, y){
+    if (x>y){
+        return y;
+    }else{
+        return x;
+    }
+}
 
 /**
  * Returns the largest value of two numbers.
@@ -159,6 +188,13 @@ function square (x){
  * @return {number} the largest number
  */
 
+function maximum (x, y){
+    if (x<y){
+        return y;
+    }else{
+        return x;
+    }
+}
 
 /**
  * Returns true if `n` is even.
@@ -166,6 +202,13 @@ function square (x){
  * @return {boolean} the number is even
  */
 
+ function isEven (n){
+     if (n%2==0){
+         return true;
+     }else{
+         return false;
+     }
+ }
 
 /**
  * Returns true if `n` is odd.
@@ -173,6 +216,13 @@ function square (x){
  * @return {boolean} the number is odd
  */
 
+ function isOdd (n){
+     if(n%2!==0){
+         return true;
+     }else{
+         return false;
+     }
+ }
 
 /**
  * Returns a letter grade.
@@ -186,6 +236,20 @@ function square (x){
  * @return {string} the score represented as a letter grade
  */
 
+function letterGrade (score, total){
+    var grades = {
+        A:0.9,
+        B:0.8,
+        C:0.7,
+        D:0.6,
+        F:0.0
+    }
+    for (key in grades){
+        if (score/total >=grades[key]){
+            return key;
+    }
+}
+}
 
 /**
  * Checks if a `restaurant` object has a `reviews` property.
@@ -195,6 +259,15 @@ function square (x){
  * @return {object} restaurant
  */
 
+ function incrementReviews (restaurant){
+    if (!(restaurant.hasOwnProperty('reviews'))){
+        restaurant.reviews = 1;
+    }else{
+        restaurant.reviews +=1;
+    }
+
+    return restaurant;
+ }
 
 /**
  * Joins two strings with a space.
@@ -203,6 +276,9 @@ function square (x){
  * @return {string} joined the words joined with a space
  */
 
+function combine (word1, word2){
+    return word1 + " "+word2;
+}
 
 /**
  * Returns a circle object with the properties `circumference` and `area`.
@@ -212,3 +288,9 @@ function square (x){
  * @return {object} circle
  */
 
+ function createCircle (radius){
+    circle = {};
+    circle.area = Math.PI*radius*radius;
+    circle.circumference = Math.PI*2*radius;
+    return circle;
+ }
