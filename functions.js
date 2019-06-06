@@ -4,6 +4,9 @@
  * @return {string} the number as a string
  */
 
+ function numberToString (n){
+     return str = n.toString();
+ }
 
 /**
  * Adds one to a given number.
@@ -11,6 +14,9 @@
  * @return {number}
  */
 
+function increase (n){
+    return n += 1;
+}
 
 /**
  * Subtracts one from a given number.
@@ -18,6 +24,9 @@
  * @return {number}
  */
 
+function decrease (n){
+    return n-= 1;
+}
 
 /**
  * Adds two numbers.
@@ -26,6 +35,10 @@
  * @return {number} the sum
  */
 
+function add (x, y){
+    var sum = x+y;
+    return sum;
+}
 
 /**
  * Subtracts the second number from the first.
@@ -34,6 +47,10 @@
  * @return {number} the difference
  */
 
+ function subtract (x, y){
+     var difference = x-y;
+     return difference;
+ }
 
 /**
  * Multiplies two numbers.
@@ -42,6 +59,10 @@
  * @return {number} the product
  */
 
+ function multiply (x, y){
+     var product = x*y;
+     return product;
+ }
 
 /**
  * Divides the first number by the second.
@@ -50,6 +71,10 @@
  * @return {number} the quotient
  */
 
+ function divide (x, y){
+     var quotient = x/y;
+     return quotient;
+ }
 
 /**
  * Multiplies a number by itself.
@@ -57,6 +82,9 @@
  * @return {number} squared
  */
 
+function square (x){
+    return x*x;
+}
 
 /**
  * Performs a mathematical operation on two numbers.
@@ -67,6 +95,30 @@
  * @return {number} the result
  */
 
+ function calculate (operation, x, y){
+    switch(operation){
+        case 'add':
+            var text = x +' + '+ y +" = " + add(x,y);
+            console.log(text);
+            return add (x,y);
+            break;      
+        case 'subtract':
+            var text = x +' - '+y+" = " + subtract(x,y);
+            console.log(text);
+            return subtract (x,y);
+            break;
+        case 'multiply':
+            var text = x +' * '+y+" = " + multiply(x,y);
+            console.log(text);
+            return multiply (x,y);
+            break;      
+        case 'divide':
+            var text = x +' / '+y+" = " + divide(x,y);
+            console.log(text);
+            return divide (x,y);
+            break;
+        }
+ }
 
 /**
  * Returns true if `a` is greater than `b`.
